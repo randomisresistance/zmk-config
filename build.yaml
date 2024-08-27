@@ -18,5 +18,5 @@
 #
 ---
 include:
-  - board: sparkfun_pro_micro_rp2040
-    shield: chalice
+  - board: arnew_uncle2040
+    shield: bob

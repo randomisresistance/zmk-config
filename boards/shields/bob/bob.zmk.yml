@@ -1,0 +1,8 @@
+file_format: "1"
+id: bob
+name: Bob
+type: shield
+url: 
+requires: [bob_pins]
+features:
+  - keys

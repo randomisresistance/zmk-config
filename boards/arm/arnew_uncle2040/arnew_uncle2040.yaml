@@ -1,0 +1,17 @@
+identifier: arnew_uncle2040
+name: ArneW-Uncle2040
+type: mcu
+arch: arm
+flash: 16384
+ram: 264
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - gpio
+  - hwinfo
+  - watchdog
+  - flash
+  - dma
+  - counter

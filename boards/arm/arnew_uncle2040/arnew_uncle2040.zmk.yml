@@ -1,0 +1,9 @@
+file_format: "1"
+id: arnew_uncle2040
+name: ArneW Uncle 2040
+type: board
+arch: arm
+outputs:
+  - usb
+url: 
+exposes: [bob_pins]
