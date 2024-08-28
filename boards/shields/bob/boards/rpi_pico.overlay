@@ -9,7 +9,7 @@
 #include <rpi_pico/rp2040.dtsi>
 
 / {
-	bob_pins: connector {
+	bob_pins: harness {
 		compatible = "gpio-nexus";
 		#gpio-cells = <2>;
 		gpio-map-mask = <0xffffffff 0xffffffc0>;
