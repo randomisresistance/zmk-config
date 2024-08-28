@@ -36,35 +36,32 @@
         diode-direction = "col2row";
 
         col-gpios
-            = <&bob_pins 0 GPIO_ACTIVE_HIGH>
-            , <&bob_pins 1 GPIO_ACTIVE_HIGH>
-            , <&bob_pins 2 GPIO_ACTIVE_HIGH>
-            , <&bob_pins 3 GPIO_ACTIVE_HIGH>
-            , <&bob_pins 4 GPIO_ACTIVE_HIGH>
-            , <&bob_pins 5 GPIO_ACTIVE_HIGH>
+            = <&bob_pins 6 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 7 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 8 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 9 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 10 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 11 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 12 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 13 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 14 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 15 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 16 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 17 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 18 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 19 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 20 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 21 GPIO_ACTIVE_HIGH>
+            , <&bob_pins 22 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
-            = <&bob_pins 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 7  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-
-            , <&bob_pins 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-
-            , <&bob_pins 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-
-            , <&bob_pins 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&bob_pins 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&bob_pins 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&bob_pins 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&bob_pins 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&bob_pins 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&bob_pins 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&bob_pins 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 };
