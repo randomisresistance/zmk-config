@@ -18,5 +18,7 @@
 #
 ---
 include:
-  - board: arnew_uncle2040
+#  - board: arnew_uncle2040
+#    shield: bob
+  - board: rpi_pico 
     shield: bob
