@@ -22,3 +22,5 @@ include:
 #    shield: bob
   - board: rpi_pico 
     shield: bob
+    snippet: zmk-usb-logging
+    
