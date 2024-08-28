@@ -1,0 +1,67 @@
+/*
+ * Copyright (c) 2021 Yonatan Schachter
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <freq.h>
+
+#include <rpi_pico/rp2040.dtsi>
+
+/ {
+	bob_pins: harness {
+		compatible = "gpio-nexus";
+		#gpio-cells = <2>;
+		gpio-map-mask = <0xffffffff 0xffffffc0>;
+		gpio-map-pass-thru = <0 0x3f>;
+		gpio-map = 
+			<0 0 &gpio0 8 0>,	/* GP */
+			<1 0 &gpio0 9 0>,	/* GP */
+			<2 0 &gpio0 10 0>,	/* GP */
+			<3 0 &gpio0 11 0>,	/* GP */
+			<4 0 &gpio0 12 0>,	/* GP */
+
+			<5 0 &gpio0 13 0>,	/* GP */
+			<6 0 &gpio0 16 0>,	/* GP */
+			<7 0 &gpio0 17 0>,	/* GP */
+			<8 0 &gpio0 18 0>,	/* GP */
+			<9 0 &gpio0 19 0>,	/* GP */
+
+			<10 0 &gpio0 20 0>,	/* GP */
+			<11 0 &gpio0 21 0>,	/* GP */
+			<12 0 &gpio0 22 0>,	/* GP */
+			<13 0 &gpio0 26 0>,	/* GP */
+			<14 0 &gpio0 27 0>,	/* GP */
+
+			<15 0 &gpio0 0 0>,	/* GP */
+			<16 0 &gpio0 1 0>,	/* GP */
+			<17 0 &gpio0 2 0>,	/* GP */
+			<18 0 &gpio0 3 0>,	/* GP */
+			<19 0 &gpio0 4 0>,	/* GP */
+
+			<20 0 &gpio0 5 0>,	/* GP */
+			<21 0 &gpio0 6 0>,	/* GP */
+			<22 0 &gpio0 7 0>;  /* GP */
+	};
+};
+
+&gpio0 {
+	status = "okay";
+};
+
+&timer {
+	status = "okay";
+};
+
+&wdt0 {
+	status = "okay";
+};
+
+zephyr_udc0: &usbd {
+	status = "okay";
+};
+
+&vreg {
+	regulator-always-on;
+	regulator-allowed-modes = <REGULATOR_RPI_PICO_MODE_NORMAL>;
+};
