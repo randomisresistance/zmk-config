@@ -1,0 +1,140 @@
+/*
+ * Copyright (c) 2021 Yonatan Schachter
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <freq.h>
+
+
+/ {
+	bob_pins: harness {
+		compatible = "gpio-nexus";
+		#gpio-cells = <2>;
+		gpio-map-mask = <0xffffffff 0xffffffc0>;
+		gpio-map-pass-thru = <0 0x3f>;
+		gpio-map = 
+			<5 0 &feather_header 15 0>,	/* GP */
+			<4 0 &feather_header 16 0>,	/* GP */
+			<3 0 &feather_header 17 0>,	/* GP */
+			<2 0 &feather_header 18 0>,	/* GP */
+			<1 0 &feather_header 19 0>,	/* GP */
+			<0 0 &feather_header 20 0>,	/* GP */
+
+			<6 0 &feather_header 14 0>,	/* GP */
+			<14 0 &mcp 0 0>,	/* GP */
+			<13 0 &mcp 1 0>,	/* GP */
+			<12 0 &mcp 2 0>,	/* GP */
+			<11 0 &mcp 3 0>,	/* GP */
+			<10 0 &mcp 4 0>,	/* GP */
+			<9 0 &mcp 5 0>,	/* GP */
+			<8 0 &mcp 6 0>,	/* GP */
+			<7 0 &mcp 7 0>,	/* GP */
+			
+			<22 0 &mcp 8 0>,	/* GP */
+			<21 0 &mcp 9 0>,	/* GP */
+			<20 0 &mcp 10 0>,	/* GP */
+			<19 0 &mcp 11 0>,	/* GP */
+			<18 0 &mcp 12 0>,	/* GP */
+			<17 0 &mcp 13 0>,	/* GP */
+			<16 0 &mcp 14 0>,	/* GP */
+			<15 0 &mcp 15 0>;  /* GP */
+	};
+	// 	bob_pins: harness {
+	// 	compatible = "gpio-nexus";
+	// 	#gpio-cells = <2>;
+	// 	gpio-map-mask = <0xffffffff 0xffffffc0>;
+	// 	gpio-map-pass-thru = <0 0x3f>;
+	// 	gpio-map = 
+	// 		<0 0 &feather_header 14 0>,	/* GP */
+	// 		<1 0 &feather_header 15 0>,	/* GP */
+	// 		<2 0 &feather_header 16 0>,	/* GP */
+	// 		<3 0 &feather_header 17 0>,	/* GP */
+	// 		<4 0 &feather_header 18 0>,	/* GP */
+	// 		<5 0 &feather_header 19 0>,	/* GP */
+
+	// 		<6  0 &pcf20 7 0>,	/* GP */
+	// 		<7  0 &pcf21 0 0>,	/* GP */
+	// 		<8  0 &pcf21 1 0>,	/* GP */
+	// 		<9  0 &pcf21 2 0>,	/* GP */
+	// 		<10 0 &pcf21 3 0>,	/* GP */
+	// 		<11 0 &pcf21 4 0>,	/* GP */
+	// 		<12 0 &pcf21 5 0>,	/* GP */
+	// 		<13 0 &pcf21 6 0>,	/* GP */
+	// 		<14 0 &pcf21 7 0>,	/* GP */
+	// 		<15 0 &pcf22 0 0>,	/* GP */
+	// 		<16 0 &pcf22 1 0>,	/* GP */
+	// 		<17 0 &pcf22 2 0>,	/* GP */
+	// 		<18 0 &pcf22 3 0>,	/* GP */
+	// 		<19 0 &pcf22 4 0>,	/* GP */
+	// 		<20 0 &pcf22 5 0>,	/* GP */
+	// 		<21 0 &pcf22 6 0>,	/* GP */
+	// 		<22 0 &pcf22 7 0>;  /* GP */
+	// };
+};
+
+&arduino_i2c {
+	compatible = "nordic,nrf-twim";
+		clock-frequency = <I2C_BITRATE_STANDARD>;
+
+	status = "okay";
+    #address-cells = <1>;
+    #size-cells = <0>;
+	// pcf20: pcf8574@20 {
+    //     compatible = "nxp,pcf8574";
+    //     reg = <0x20>;
+    //     gpio-controller;
+    //     #gpio-cells = <2>;
+	// 	ngpios = <8>;
+    //     status = "okay";
+	// 	int-gpios = <&mesh_header 9 0>;
+	// };
+	// pcf21: pcf8574@21 {
+    //     compatible = "nxp,pcf8574";
+    //     reg = <0x21>;
+    //     gpio-controller;
+    //     #gpio-cells = <2>;
+	// 	ngpios = <8>;
+    //     status = "okay";
+	// 	int-gpios = <&mesh_header 9 0>;
+	// };
+	// 	pcf22: pcf8574@22 {
+    //     compatible = "nxp,pcf8574";
+    //     reg = <0x22>;
+    //     gpio-controller;
+    //     #gpio-cells = <2>;
+	// 	ngpios = <8>;
+    //     status = "okay";
+	// 	int-gpios = <&mesh_header 9 0>;
+	// };
+	    mcp: mcp23017@20 {
+        compatible = "microchip,mcp230xx";
+        status = "okay";
+        gpio-controller;
+        reg = <0x20>;
+        #gpio-cells = <2>;
+        ngpios = <16>;
+    };
+};
+
+
+// &gpio0 {
+// 	status = "okay";
+// };
+
+// &timer {
+// 	status = "okay";
+// };
+
+// &wdt0 {
+// 	status = "okay";
+// };
+
+// zephyr_udc0: &usbd {
+// 	status = "okay";
+// };
+
+// &vreg {
+// 	regulator-always-on;
+// 	regulator-allowed-modes = <REGULATOR_RPI_PICO_MODE_NORMAL>;
+// };
