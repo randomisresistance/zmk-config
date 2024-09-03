@@ -22,6 +22,8 @@ include:
     shield: bob
   - board: rpi_pico 
     shield: bob
+  - board: particle_argon
+    shield: bob
     # snippet: zmk-usb-logging
     # cmake-args: -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
 
