@@ -51,7 +51,7 @@
 };
 
 &kscan0 {
-    debounce-press-ms = <10>;
-    debounce-release-ms = <10>;
+    debounce-press-ms = <0>;
+    debounce-release-ms = <5>;
 };
 
