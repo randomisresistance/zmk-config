@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
+#if 0
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/init.h>
@@ -27,3 +27,5 @@ static int pinmux_nice_nano_v2_init(void) {
 }
 
 SYS_INIT(pinmux_nice_nano_v2_init, EARLY, 10);
+
+#endif

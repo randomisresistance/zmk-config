@@ -56,7 +56,13 @@
 			<21 0 &mcp 14 0>,	/* GP */
 			<22 0 &mcp 15 0>;  /* GP */
 	};
-
+	vdd_pwr: vdd-pwr-ctrl {
+		compatible = "regulator-fixed";
+		regulator-name = "vdd-pwr-ctrl";
+		enable-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+		// regulator-boot-on;
+		startup-delay-us = <1000>;
+	};
 };
 
 &pro_micro {
@@ -78,5 +84,6 @@
         #gpio-cells = <2>;
         ngpios = <16>;
 		reset-gpios = <&pro_micro 9 0>;
+		vin-supply = <&vdd_pwr>;
     };
 };
