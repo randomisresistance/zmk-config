@@ -84,7 +84,7 @@
         reg = <0x20>;
         #gpio-cells = <2>;
         ngpios = <16>;
-		reset-gpios = <&gpio1 06 GPIO_ACTIVE_HIGH>;
+		reset-gpios = <&gpio1 06 GPIO_ACTIVE_LOW>;
 		//vin-supply = <&vdd_pwr>;
     };
 };
