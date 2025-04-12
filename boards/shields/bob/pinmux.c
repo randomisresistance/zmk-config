@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#if 0
+#if 1
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/init.h>
