@@ -77,5 +77,6 @@
         reg = <0x20>;
         #gpio-cells = <2>;
         ngpios = <16>;
+		reset-gpios = <&pro_micro 9 0>;
     };
 };
